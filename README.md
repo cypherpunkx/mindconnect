@@ -1,25 +1,71 @@
 # 🌱 MindConnect – Ruang Aman Remaja
 
-**MindConnect** adalah aplikasi web berbasis komunitas yang dirancang untuk membantu remaja dalam menghadapi tantangan kesehatan mental, tekanan sosial, ketergantungan teknologi, dan kurangnya literasi finansial. Aplikasi ini menyediakan ruang aman digital untuk refleksi diri, edukasi, dan saling mendukung.
+**MindConnect** adalah aplikasi web interaktif yang dirancang khusus untuk membantu generasi muda menghadapi tantangan kesehatan mental, literasi keuangan, manajemen teknologi, dan akses terhadap informasi bermanfaat. MindConnect menyediakan ruang aman digital dengan pendekatan yang inklusif, ringan, dan mudah digunakan oleh remaja dari berbagai latar belakang.
 
 ---
 
-## 🚀 Fitur Utama (MVP)
+## 🔧 Fitur-Fitur Utama
 
-- 🧠 **Self-Assessment Kesehatan Mental**  
-  Tes kecemasan dan depresi berbasis skala untuk refleksi mandiri.
+### 🧠 1. Zona Kesehatan Mental
+- **Tes Self-Assessment**  
+  Tes awal berbasis skala (misalnya PHQ-9, GAD-7) untuk mengukur tingkat stres, depresi, dan kecemasan.
 
-- 📓 **Jurnal Emosi Harian**  
-  Catatan harian suasana hati untuk membantu pengguna memahami diri.
+- **Jurnal Emosi**  
+  Alat pencatatan harian untuk membantu pengguna mengenali suasana hati, emosi, dan pemicunya.
 
-- 💬 **Komunitas Anonim**  
-  Forum diskusi terbuka dan aman untuk berbagi cerita dan saling mendukung.
+- **Sesi Mindfulness & Meditasi**  
+  Akses ke video/audio bimbingan singkat untuk menenangkan pikiran dan mengelola stres.
 
-- 💰 **Edukasi Finansial Dasar**  
-  Konten pembelajaran tentang pengelolaan uang, budgeting, dan simulasi sederhana.
+- **Komunitas Anonim**  
+  Forum diskusi aman dan anonim, dengan topik seperti depresi, body image, burnout, dan lainnya.
 
-- ⏳ **Manajemen Waktu Layar**  
-  Pencatatan dan visualisasi waktu penggunaan gadget untuk membangun kebiasaan sehat.
+- **Live Chat Psikolog (Terjadwal)**  
+  Layanan konseling profesional (gratis atau berbayar ringan) untuk dukungan yang lebih personal.
+
+---
+
+### 💸 2. Zona Edukasi Finansial
+- **Simulasi Keuangan**  
+  Game interaktif tentang budgeting, menabung, dan membuat keputusan belanja yang cerdas.
+
+- **Kelas Mini (Microlearning)**  
+  Materi edukatif singkat mengenai keuangan pribadi, investasi dasar, dan strategi hemat.
+
+- **Kalkulator Finansial Remaja**  
+  Alat bantu untuk menghitung uang jajan, target tabungan, atau estimasi biaya harian.
+
+---
+
+### 📵 3. Zona Manajemen Teknologi
+- **Tracker Waktu Layar**  
+  Sistem pelacakan penggunaan gadget, baik melalui input manual atau integrasi API (opsional).
+
+- **Detoks Digital**  
+  Tantangan 7, 14, atau 30 hari tanpa media sosial, lengkap dengan sistem motivasi dan penghargaan.
+
+- **Kelas Literasi Digital**  
+  Edukasi tentang keamanan digital, hoaks, cyberbullying, dan privasi online.
+
+---
+
+### 🌍 4. Zona Akses dan Inklusi
+- **Peta Akses Bantuan**  
+  Direktori interaktif yang memuat informasi lokasi psikolog, bimbingan karir, dan layanan dukungan lokal.
+
+- **Beasiswa & Peluang**  
+  Update info beasiswa, magang, dan program pengembangan remaja yang relevan.
+
+- **Bahasa Sederhana & Aksesibilitas**  
+  Desain ramah untuk pengguna dengan berbagai tingkat literasi dan kemampuan.
+
+---
+
+## 📈 Manfaat Langsung Bagi Remaja
+
+- ✅ Mendapat dukungan emosional tanpa stigma.
+- ✅ Lebih sadar dan bijak dalam menggunakan teknologi.
+- ✅ Meningkatkan literasi finansial sejak dini.
+- ✅ Merasa tidak sendirian dan punya ruang aman.
 
 ---
 
@@ -27,7 +73,7 @@
 
 - **Frontend**: React.js / Next.js  
 - **Backend**: Node.js + Express.js atau Django  
-- **Database**: PostgreSQL / MongoDB  
+- **Database**: Mysql / PostgreSQL / MongoDB  
 - **Authentication**: Firebase Auth / JWT  
 - **Deployment**: Vercel / Netlify (Frontend), Railway / Render (Backend)
 
