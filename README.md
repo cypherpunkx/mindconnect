@@ -71,29 +71,204 @@
 
 ## 🛠️ Teknologi yang Digunakan
 
-- **Frontend**: React.js / Next.js  
-- **Backend**: Node.js + Express.js atau Django  
-- **Database**: Mysql / PostgreSQL / MongoDB  
-- **Authentication**: Firebase Auth / JWT  
-- **Deployment**: Vercel / Netlify (Frontend), Railway / Render (Backend)
+### Frontend
+- **Next.js 15** dengan TypeScript untuk full-stack React framework
+- **Tailwind CSS** untuk styling yang konsisten dan responsive
+- **PWA capabilities** dengan next-pwa untuk offline functionality
+- **TanStack Query** (React Query) untuk state management dan caching
+- **Socket.io Client** untuk real-time features
+- **Zod** untuk validation dan type safety
+
+### Backend
+- **Node.js** dengan **Express.js** framework
+- **TypeScript** untuk type safety dan better developer experience
+- **Socket.io** untuk real-time features (live chat, notifications)
+- **JWT** untuk authentication dan session management
+- **Helmet** untuk security headers dan protection
+
+### Database & Caching
+- **MySQL 8.0+** sebagai primary database dengan connection pooling
+- **Redis** untuk session storage dan caching
+- **MySQL JSON** data type untuk semi-structured content
+
+### Infrastructure
+- **Docker & Docker Compose** untuk development environment
+- **GitHub Actions** untuk CI/CD pipeline
+- **Security scanning** dengan Trivy
+- **Automated testing** dengan Jest dan Playwright
 
 ---
 
-## 📁 Struktur Proyek (MVP)
+## 📁 Struktur Proyek
 
+```
 mindconnect/
-├── client/ # Frontend React App
-│ ├── components/
-│ ├── pages/
-│ └── ...
-├── server/ # Backend API
-│ ├── models/
-│ ├── routes/
-│ └── ...
+├── frontend/                 # Next.js Frontend Application
+│   ├── src/
+│   │   ├── components/      # Reusable UI components
+│   │   ├── pages/          # Next.js pages
+│   │   ├── lib/            # Utility functions
+│   │   ├── types/          # TypeScript type definitions
+│   │   └── hooks/          # Custom React hooks
+│   ├── public/             # Static assets and PWA files
+│   ├── package.json
+│   ├── next.config.ts
+│   └── tsconfig.json
+├── backend/                  # Express.js Backend API
+│   ├── src/
+│   │   ├── config/         # Database and Redis configuration
+│   │   ├── routes/         # API route handlers
+│   │   ├── models/         # Data models and schemas
+│   │   ├── middleware/     # Express middleware
+│   │   ├── services/       # Business logic services
+│   │   └── utils/          # Utility functions
+│   ├── package.json
+│   └── tsconfig.json
 ├── database/
-│ └── schema.sql # Struktur database
-├── README.md
-└── .env.example # Contoh konfigurasi environment
+│   └── init/               # Database initialization scripts
+├── .github/
+│   └── workflows/          # CI/CD pipeline configuration
+├── .kiro/
+│   └── specs/              # Feature specifications and documentation
+├── docker-compose.yml      # Development environment setup
+├── setup.js               # Automated setup script
+├── test-infrastructure.js # Infrastructure testing script
+└── README.md
+```
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- Docker & Docker Compose
+- Git
+
+### Automated Setup
+```bash
+# Clone the repository
+git clone <repository-url>
+cd mindconnect
+
+# Run automated setup
+node setup.js
+```
+
+### Manual Setup
+```bash
+# Install dependencies
+cd frontend && npm ci
+cd ../backend && npm ci
+
+# Setup environment files
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env.local
+
+# Start services with Docker
+docker-compose up -d
+
+# Access the application
+# Frontend: http://localhost:3000
+# Backend API: http://localhost:5000/health
+# MySQL: localhost:3307
+# Redis: localhost:6380
+```
+
+### Development Commands
+```bash
+# Start development servers
+cd frontend && npm run dev  # Frontend development server
+cd backend && npm run dev   # Backend development server
+
+# Run tests
+cd frontend && npm test     # Frontend tests
+cd backend && npm test      # Backend tests
+
+# Type checking
+npm run type-check          # TypeScript validation
+
+# Linting
+npm run lint               # Code linting
+npm run lint:fix           # Auto-fix linting issues
+```
+
+---
+
+## 🧪 Testing
+
+### Infrastructure Test
+```bash
+node test-infrastructure.js
+```
+
+### Unit & Integration Tests
+```bash
+# Backend tests
+cd backend && npm test
+
+# Frontend tests  
+cd frontend && npm test
+
+# Test coverage
+npm run test:coverage
+```
+
+### End-to-End Tests
+```bash
+# Run E2E tests (coming soon)
+npm run test:e2e
+```
+
+---
+
+## 🐳 Docker Development
+
+### Start all services
+```bash
+docker-compose up -d
+```
+
+### View logs
+```bash
+docker-compose logs -f [service-name]
+```
+
+### Stop services
+```bash
+docker-compose down
+```
+
+### Clean up (remove volumes)
+```bash
+docker-compose down -v
+```
+
+---
+
+## 🔒 Security Features
+
+- **Helmet.js** for security headers
+- **CORS** configuration for cross-origin requests
+- **JWT** authentication with secure session management
+- **Input validation** and sanitization
+- **Rate limiting** for API endpoints
+- **Data encryption** for sensitive information
+- **Automated security scanning** in CI/CD pipeline
+
+---
+
+## 📊 Database Schema
+
+The application uses MySQL with the following core tables:
+- `users` - User accounts and preferences
+- `assessment_results` - Mental health assessment data
+- `journal_entries` - Emotional journal entries
+- `financial_progress` - Financial education progress
+- `screen_time_logs` - Digital wellness tracking
+- `community_posts` - Anonymous forum posts
+
+See `database/init/01-init.sql` for complete schema.
 
 
 ---
